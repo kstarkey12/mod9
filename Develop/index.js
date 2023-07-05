@@ -14,8 +14,42 @@ inquirer
       name: 'description',
       message: 'Enter a description:',
     },
-    // Add more prompts for installation, usage, contribution, tests, license, GitHub username, and email
-    // ...
+    {
+      type: 'input',
+      name: 'installation',
+      message: 'Enter installation instructions:',
+    },
+    {
+      type: 'input',
+      name: 'usage',
+      message: 'Enter usage instructions:',
+    },
+    {
+      type: 'list',
+      name: 'license',
+      message: 'Select a license:',
+      choices: ['MIT', 'Apache-2.0', 'GPL-3.0', 'BSD-3-Clause', 'None'],
+    },
+    {
+      type: 'input',
+      name: 'contributing',
+      message: 'Enter contributing guidelines:',
+    },
+    {
+      type: 'input',
+      name: 'tests',
+      message: 'Enter test instructions:',
+    },
+    {
+      type: 'input',
+      name: 'username',
+      message: 'Enter your GitHub username:',
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'Enter your email address:',
+    },
   ])
   .then((answers) => {
     // Generate the README content based on the user's input
